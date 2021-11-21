@@ -20,7 +20,7 @@ Andersenlab test assignment
 Также скачайте проект [**TestTaskThree**](https://github.com/Crypt0putin/MatveevArtur-Csharp/tree/main/TaskThree) и запустите исполняемый файл **TestTaskThree.exe**.
 
 
-## Четверток задание
+## Четвертое задание
 
 **[((())()(())]]**
 
