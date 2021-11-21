@@ -1,0 +1,57 @@
+using System;
+
+namespace AndersenTestTaskThree
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            string exit = "exit";
+            while (true)
+                try
+                {
+                    Console.Write("\nВведите количество элементов массива:\t");
+                    string elements = Console.ReadLine();
+
+                    if (elements == exit)
+                        return;
+                    int elementsCount = int.Parse(elements);
+
+
+                    int[] myArray = new int[elementsCount];
+
+
+                    for (int i = 0; i < elementsCount; i++)
+                    {
+                        Console.Write($"\nВведите элемент массива под индексом {i}:\t ");
+                        myArray[i] = int.Parse(Console.ReadLine());                        
+                    }
+
+                    int v = 0;
+                    Console.WriteLine("\nЭлементы массива кратные трем:");
+                    for (int i = 0; i < elementsCount; i++)
+                    {
+                        if (myArray[i] % 3 == 0)
+                        {
+                            Console.WriteLine("myArray[" + i + "] = " + myArray[i]);
+                            v++;
+                        }                
+                                                               
+                    }
+                    Console.WriteLine("______________\nВсего: " + v);
+                    Console.Write("\n *для выхода из программы наберите \"exit\" и нажмите Enter два раза\n\n");
+
+                    if (v == 0)
+                    {
+                        Console.WriteLine("Элементы кратные трем отсутствуют");
+                    }
+                }
+
+                catch
+                {
+                    Console.WriteLine("Проверьте правильность ввода");
+                }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+using System;
+
+namespace AndersenTestTaskTwo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string exit = "exit";
+            Console.Write("Введите имя: ");
+
+            while (true)
+            {
+                try
+                {
+                    string UserInput = Console.ReadLine();
+                    if (UserInput == exit)
+                    {
+                        return;
+                    }
+
+                    else if (UserInput == "Вячеслав")
+                    {
+                        Console.WriteLine("\nПривет, Вячеслав");
+                        Console.Write("\nПродолжайте вводить имена либо наберите \"exit\" и нажмите Enter два раза для выхода из программы: ");
+                    }
+
+
+                    else
+                    {
+                        Console.Write("\nНет такого имени\n\nВведите имя: ");
+                    }
+                }
+
+                catch
+                {
+                    Console.WriteLine("Проверьте правильность ввода");
+                }
+
+            }
+        }
+    }
+}

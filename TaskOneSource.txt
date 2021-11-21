@@ -1,0 +1,49 @@
+using System;
+
+namespace AndersenTestTaskOne
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string exit = "exit";
+            Console.Write("Введите число: ");
+
+            while (true)
+            {                
+                try
+                {
+                    string UserInput = Console.ReadLine();
+                    if (UserInput == exit)
+                    {
+                        return;
+                    }
+
+                    int Num = int.Parse(UserInput);
+
+                    if (Num > 7)
+                    {
+                        Console.WriteLine("\nПривет");
+                        Console.Write("\nПродолжайте вводить числа либо наберите \"exit\" и нажмите Enter два раза для выхода из программы: ");
+                    }
+
+                    else if (Num == 7)
+                    {
+                        Console.Write("\nВы близки к цели! Давайте еще разок: ");
+                    }
+
+                    else
+                    {
+                        Console.Write("\nПривет не скажу, попробуй еще раз: ");
+                    }
+                }
+
+                catch
+                {
+                    Console.WriteLine("Проверьте правильность ввода");
+                }
+
+            }
+        }
+        }
+    }
